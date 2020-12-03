@@ -46,7 +46,7 @@ class Tracker extends React.Component {
 
   ipAddress = async () => {
     const ip = this.state.ip;
-    const api_url = await fetch(`http://ipwhois.app/json/${ip}`);
+    const api_url = await fetch(`https://ipwhois.app/json/${ip}`);
     const data = await api_url.json();
     //console.log(data)
     this.setState({
