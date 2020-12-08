@@ -6,7 +6,6 @@ import {
   Container,
   Header,
   FormContainer,
-  Form,
   Input,
   Button,
   PanelContainer,
@@ -48,7 +47,7 @@ class Tracker extends React.Component {
     const ip = this.state.ip;
     const api_url = await fetch(`https://ipwhois.app/json/${ip}`);
     const data = await api_url.json();
-    //console.log(data)
+    //console.log(data);
     this.setState({
       ...data,
       ip: data.ip,
@@ -90,15 +89,13 @@ class Tracker extends React.Component {
         <GlobalStyle />
         <Header>IP Address Location</Header>
         <FormContainer>
-          <Form onSubmit={this.ipAddress}>
-            <Input
-              value={ip}
-              onChange={this.onChange}
-              type="text"
-              placeholder="IP address"
-            />
-            <Button>Submit</Button>
-          </Form>
+          <Input
+            value={ip}
+            onChange={this.onChange}
+            type="text"
+            placeholder="IP address"
+          />
+          <Button onClick={this.ipAddress}>Submit</Button>
         </FormContainer>
         <PanelContainer>
           <PanelHeading>IP Address Location</PanelHeading>
