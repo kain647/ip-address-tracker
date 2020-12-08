@@ -9,6 +9,8 @@ export const GlobalStyle = createGlobalStyle`
     padding: 20px 5%;
     margin: 0;
     box-sizing: border-box;
+    
+    background: linear-gradient(#c6c6c6, #767676);
 
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -48,6 +50,9 @@ export const Header = styled.div`
 
 export const FormContainer = styled.div`
   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   box-sizing: border-box;
   width: 100%;
   background-color: #fafafa;
@@ -56,30 +61,10 @@ export const FormContainer = styled.div`
   border: 1px solid hsla(0, 0%, 0%, 0.07);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
 `;
-
-export const Form = styled.form`
-  display: flex;
-  box-sizing: border-box;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-
-  p {
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: row;
-    width: 100%;
-    text-align: center;
-    font-style: italic;
-    padding: 0;
-    margin: 0;
-    margin-bottom: 40px;
-  }
-`;
 export const Input = styled.input`
   display: flex;
-  width: 100%;
+  box-sizing: border-box;
+  width: 70%;
   border: 1px solid hsla(0, 0%, 0%, 0.07);
   color: #495057;
   border-radius: 5px;
